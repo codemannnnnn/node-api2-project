@@ -7,9 +7,8 @@ const infoRouter = require("./Blog/info");
 const server = express();
 
 // ROUTERS
-server.use("/api/posts", infoRouter);
-
 server.use(express.json());
+server.use("/api/posts", infoRouter);
 
 // Testing server
 server.get("/", (req, res) => {
